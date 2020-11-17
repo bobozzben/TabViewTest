@@ -74,6 +74,8 @@
 
 - (IBAction)GoBackButton_OnClick:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
+    
+    
 //    UIStoryboard *storyboard=[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 //    UIViewController *controllerD = [storyboard instantiateViewControllerWithIdentifier:@"FirstViewController"];
 //    [self.navigationController pushViewController:controllerD animated:YES];
