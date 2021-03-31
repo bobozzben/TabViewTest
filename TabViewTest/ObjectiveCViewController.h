@@ -11,7 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ObjectiveCViewController : UIViewController
+@interface ObjectiveCViewController : UIViewController {
+    int intValue ;
+    NSString *stringValue;
+}
+@property (strong, nonatomic) NSString *goString;
 
 @end
 

@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kIL-dn-zKU">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="toQ-DI-Xwu"/>
                                 </constraints>
@@ -77,7 +77,6 @@
                                 <state key="normal" title="語音"/>
                                 <connections>
                                     <action selector="myButton2OnClickWithSender:" destination="W5J-7L-Pyd" eventType="touchUpInside" id="dBZ-8X-fbe"/>
-                                    <segue destination="uu0-3Z-sTX" kind="show" id="KmY-WF-Okc"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ehc-wW-b6N">
@@ -97,7 +96,7 @@
                             <constraint firstItem="kIL-dn-zKU" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="wbb-h3-1zc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="home" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="8ZY-4d-cxq"/>
                     <connections>
                         <outlet property="myLoginButton" destination="3kh-3D-RuT" id="blJ-oO-h9p"/>
                         <outlet property="myOtherButton" destination="mBq-pJ-lNm" id="hT3-SG-XYJ"/>
@@ -110,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1136.25" y="-439.43661971830988"/>
+            <point key="canvasLocation" x="2133.75" y="-439.43661971830988"/>
         </scene>
         <!--Item-->
         <scene sceneID="s5I-P2-uSS">
@@ -136,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luy-DR-3e6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1978" y="-437"/>
+            <point key="canvasLocation" x="2973.75" y="-437.32394366197184"/>
         </scene>
         <!--查詢-->
         <scene sceneID="wg7-f3-ORb">
@@ -421,7 +420,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="m0t-xI-asN" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="pEe-bg-Nwk"/>
                         <segue destination="miX-Q4-NYn" kind="relationship" relationship="viewControllers" id="swj-FK-ZYF"/>
                         <segue destination="sri-5A-qnN" kind="relationship" relationship="viewControllers" id="qGq-y0-m1I"/>
@@ -436,40 +435,37 @@
             <objects>
                 <viewController storyboardIdentifier="ObjectiveCView" id="uu0-3Z-sTX" customClass="ObjectiveCViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BfQ-8A-Jch">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8l-X3-tIV">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
-                                <items>
-                                    <navigationItem id="46k-jy-Uhb">
-                                        <barButtonItem key="leftBarButtonItem" title="⬅️返回" id="k7W-GU-CyV">
-                                            <connections>
-                                                <action selector="GoBackButton_OnClick:" destination="uu0-3Z-sTX" id="d5H-AQ-7xP"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEq-Ml-9xk">
-                                <rect key="frame" x="21" y="164" width="36" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEq-Ml-9xk">
+                                <rect key="frame" x="41" y="184" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NSU-wC-caU"/>
+                                    <constraint firstAttribute="width" constant="50" id="PMn-6C-6jy"/>
+                                </constraints>
                                 <state key="normal" title="Test1"/>
                                 <connections>
                                     <action selector="Test1_Button_OnClick:" destination="uu0-3Z-sTX" eventType="touchUpInside" id="u7r-lj-B2A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYe-ma-Xnu">
-                                <rect key="frame" x="112" y="164" width="38" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IYe-ma-Xnu">
+                                <rect key="frame" x="146" y="184" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="2EE-nZ-U29"/>
+                                    <constraint firstAttribute="height" constant="50" id="fJm-bf-g8n"/>
+                                </constraints>
                                 <state key="normal" title="Test2"/>
                                 <connections>
                                     <action selector="Test2_Button_OnClick:" destination="uu0-3Z-sTX" eventType="touchUpInside" id="MNJ-f3-yTH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-9j-NLZ">
-                                <rect key="frame" x="200" y="164" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efZ-9j-NLZ">
+                                <rect key="frame" x="246" y="184" width="13" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h4p-zK-IWF"/>
+                                    <constraint firstAttribute="width" constant="50" id="y9B-ZB-XDb"/>
+                                </constraints>
                                 <state key="normal" title="Test3"/>
                                 <connections>
                                     <action selector="Test3_Button_OnClick:" destination="uu0-3Z-sTX" eventType="touchUpInside" id="hIM-Vk-lJ6"/>
@@ -479,14 +475,20 @@
                         <viewLayoutGuide key="safeArea" id="Zqu-4p-GW8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="j8l-X3-tIV" firstAttribute="leading" secondItem="Zqu-4p-GW8" secondAttribute="leading" id="T8b-IS-UYd"/>
-                            <constraint firstItem="j8l-X3-tIV" firstAttribute="trailing" secondItem="Zqu-4p-GW8" secondAttribute="trailing" id="bZl-vi-wHG"/>
-                            <constraint firstItem="j8l-X3-tIV" firstAttribute="top" secondItem="Zqu-4p-GW8" secondAttribute="top" id="oLF-dl-pNC"/>
+                            <constraint firstItem="IYe-ma-Xnu" firstAttribute="leading" secondItem="bEq-Ml-9xk" secondAttribute="trailing" constant="55" id="5nc-BA-MMm"/>
+                            <constraint firstItem="bEq-Ml-9xk" firstAttribute="leading" secondItem="Zqu-4p-GW8" secondAttribute="leading" constant="41" id="DOb-VF-wkt"/>
+                            <constraint firstItem="efZ-9j-NLZ" firstAttribute="leading" secondItem="IYe-ma-Xnu" secondAttribute="trailing" constant="50" id="Fdq-d9-oKS"/>
+                            <constraint firstItem="IYe-ma-Xnu" firstAttribute="top" secondItem="Zqu-4p-GW8" secondAttribute="top" constant="184" id="OyK-dZ-e18"/>
+                            <constraint firstItem="bEq-Ml-9xk" firstAttribute="top" secondItem="Zqu-4p-GW8" secondAttribute="top" constant="184" id="PhV-4w-7VQ"/>
+                            <constraint firstItem="Zqu-4p-GW8" firstAttribute="bottom" secondItem="IYe-ma-Xnu" secondAttribute="bottom" constant="354" id="SSo-yQ-Dkj"/>
+                            <constraint firstItem="Zqu-4p-GW8" firstAttribute="trailing" secondItem="efZ-9j-NLZ" secondAttribute="trailing" constant="61" id="h8P-MF-rAd"/>
+                            <constraint firstItem="Zqu-4p-GW8" firstAttribute="bottom" secondItem="bEq-Ml-9xk" secondAttribute="bottom" constant="354" id="iSc-lc-eAt"/>
+                            <constraint firstItem="efZ-9j-NLZ" firstAttribute="top" secondItem="Zqu-4p-GW8" secondAttribute="top" constant="184" id="k5q-jp-lja"/>
+                            <constraint firstItem="Zqu-4p-GW8" firstAttribute="bottom" secondItem="efZ-9j-NLZ" secondAttribute="bottom" constant="354" id="p1u-k8-0zS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Xwn-5l-KUy"/>
                     <connections>
-                        <outlet property="GoBackButton" destination="k7W-GU-CyV" id="GCW-Ke-afg"/>
                         <outlet property="Test1_Button" destination="bEq-Ml-9xk" id="Art-fJ-ukA"/>
                         <outlet property="Test2_Button" destination="IYe-ma-Xnu" id="Hmt-gG-nPW"/>
                         <outlet property="Test3_Button" destination="efZ-9j-NLZ" id="dLM-RG-4S0"/>
@@ -542,6 +544,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mlP-fu-xTP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="103.125" y="924.29577464788736"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kOx-Nb-w1o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0t-xI-asN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" image="home" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hcQ-db-RC6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="FZc-r9-umZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F8l-pe-9IV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1136.25" y="-439.43661971830988"/>
         </scene>
     </scenes>
     <resources>

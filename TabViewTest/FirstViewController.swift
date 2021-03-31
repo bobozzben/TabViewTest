@@ -11,8 +11,6 @@ import CoreData
 import SafariServices
 import Speech
 
-
-
 protocol LoginparamDelegate {
     func mySetparam( param: ILoginParams)
 }
@@ -50,11 +48,11 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
     @IBOutlet weak var myWebPageButton: UIButton!
     @IBOutlet weak var textView2: UITextView!
     
+    public var myGoString = ""
     
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
-    
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "zh-TW"))  //1
     
     var loginParams : ILoginParams?
@@ -414,10 +412,16 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
    
     @IBAction func myButton2OnClick(sender : AnyObject){
         
-       // let ObjectiveCView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ObjectiveCView") as! ObjectiveCViewController
-
-        // ObjectiveCView
-       // self.present(ObjectiveCView, animated: true, completion: nil)
+       // ObjectiveCView
+      // let ObjectiveCView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ObjectiveCView") as! ObjectiveCViewController
+      // self.present(ObjectiveCView, animated: true, completion: nil)
+      
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        if let vc = mainStoryboard.instantiateViewController(withIdentifier: "ObjectiveCView") as? ObjectiveCViewController
+        {
+            vc.goString = "123456798ABCDEFG";
+            navigationController?.pushViewController(vc , animated: true)
+        }
         
         /*
         if audioEngine.isRunning {
@@ -428,8 +432,8 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
         } else {
             startRecording()
             myOtherButton.setTitle("結束", for: .normal)
-        } */
-        
+        }
+        */
         // Page2 Button
         //if loginParams!.signed == true {
         //    self.tabBarController?.selectedIndex = 2
@@ -519,7 +523,8 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
             recognitionTask?.cancel()
             recognitionTask = nil
         }
-        
+        AudioServicesPlaySystemSound(1111);
+
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(AVAudioSession.Category.record)
@@ -557,6 +562,8 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
                 self.recognitionTask = nil
                 
                 self.myOtherButton.isEnabled = true
+                AudioServicesPlaySystemSound(1112);
+
             }
         })
         
