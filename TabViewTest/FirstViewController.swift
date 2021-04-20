@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 import SafariServices
 import Speech
+import Vision
+import VisionKit
 
 protocol LoginparamDelegate {
     func mySetparam( param: ILoginParams)
@@ -38,7 +40,7 @@ extension UIView {
     }
 }
 
-class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafariViewControllerDelegate ,SFSpeechRecognizerDelegate  {
+class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafariViewControllerDelegate ,SFSpeechRecognizerDelegate ,VNDocumentCameraViewControllerDelegate  {
 
     @IBOutlet weak var myQueryButton: UIButton!
     @IBOutlet weak var myLoginButton: UIButton!
@@ -117,6 +119,27 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
         
         super.viewDidLoad()
         
+        // Test VisionKit ios >= 13  1100420 手機版本太低不能用，虚擬機不能用相機
+       /* let vc = VNDocumentCameraViewController()
+        vc.delegate = self
+        present(vc, animated: true)
+                
+        let vsrequest = VNRecognizeTextRequest { request, error in
+            guard let observations = request.results as? [VNRecognizedTextObservation] else {
+                fatalError("Received invalid observations")
+            }
+
+            for observation in observations {
+                guard let bestCandidate = observation.topCandidates(1).first else {
+                    print("No candidate")
+                    continue
+                }
+
+                print("Found this candidate: \(bestCandidate.string)")
+            }
+        }
+        vsrequest.minimumTextHeight = 1/32;
+       */
         //-------------------------------------------------------------------------
         // 用來操作 Core Data 的常數 ，記錄登入的資訊
         let appDeletegate = UIApplication.shared.delegate as! AppDelegate
@@ -583,6 +606,19 @@ class FirstViewController: UIViewController ,UITabBarControllerDelegate , SFSafa
         textView2.text = "說點什麼..."
         
     }
+
+    
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan) {
+        print("Found \(scan.pageCount)")
+
+        for i in 0 ..< scan.pageCount {
+            let img = scan.imageOfPage(at: i)
+            // ... your code here
+        }
+    }
+    
+    
+    
     
 }
 

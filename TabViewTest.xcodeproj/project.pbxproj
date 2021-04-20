@@ -20,6 +20,7 @@
 		7A524A1D2165AA4700367A6A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A524A1C2165AA4700367A6A /* MapKit.framework */; };
 		7A524A212165CAFC00367A6A /* FourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A524A202165CAFC00367A6A /* FourViewController.swift */; };
 		7A88C1291FFB718D003A2646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A88C1281FFB718D003A2646 /* Assets.xcassets */; };
+		7A8DAE87262E860200E00116 /* VisionKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A8DAE86262E860200E00116 /* VisionKit.framework */; };
 		7AABBDAB1FDE5963001710C4 /* CoreDataConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABBDAA1FDE5963001710C4 /* CoreDataConnect.swift */; };
 		7AABBDAD1FDE5CA6001710C4 /* SoapConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AABBDAC1FDE5CA6001710C4 /* SoapConnect.swift */; };
 		7AB901FF1FDA3B550082C1E8 /* DBModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AB901FD1FDA3B550082C1E8 /* DBModel.xcdatamodeld */; };
@@ -75,6 +76,7 @@
 		7A524A1C2165AA4700367A6A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7A524A202165CAFC00367A6A /* FourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourViewController.swift; sourceTree = "<group>"; };
 		7A88C1281FFB718D003A2646 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A8DAE86262E860200E00116 /* VisionKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VisionKit.framework; path = System/Library/Frameworks/VisionKit.framework; sourceTree = SDKROOT; };
 		7AABBDAA1FDE5963001710C4 /* CoreDataConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataConnect.swift; sourceTree = "<group>"; };
 		7AABBDAC1FDE5CA6001710C4 /* SoapConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoapConnect.swift; sourceTree = "<group>"; };
 		7AB901FE1FDA3B550082C1E8 /* DBModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DBModel.xcdatamodel; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				7AB9020B1FDA42EB0082C1E8 /* libsqlite3.tbd in Frameworks */,
 				7A524A1D2165AA4700367A6A /* MapKit.framework in Frameworks */,
 				80D48E077EAFF5FE0D06DE60 /* Pods_TabViewTest.framework in Frameworks */,
+				7A8DAE87262E860200E00116 /* VisionKit.framework in Frameworks */,
 				7A00A51C2555239B0097B1B7 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +207,7 @@
 		7AB902081FDA42800082C1E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A8DAE86262E860200E00116 /* VisionKit.framework */,
 				7A00A51B2555239B0097B1B7 /* AudioToolbox.framework */,
 				7A524A1C2165AA4700367A6A /* MapKit.framework */,
 				7AB902091FDA42800082C1E8 /* libsqlite3.tbd */,
@@ -642,7 +646,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7RGMQS6P2;
 				INFOPLIST_FILE = TabViewTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = X.TabViewTest;
 				PRODUCT_NAME = "Test資訊";
@@ -660,7 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R7RGMQS6P2;
 				INFOPLIST_FILE = TabViewTest/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = X.TabViewTest;
 				PRODUCT_NAME = "Test資訊";
